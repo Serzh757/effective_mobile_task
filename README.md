@@ -1,2 +1,2 @@
-# effective_mobile_task-
+# effective_mobile_task
 Тестовое задание для Effective Mobile 
