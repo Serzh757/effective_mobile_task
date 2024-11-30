@@ -1,11 +1,9 @@
-name: Continuous Integration for Go simple api
+name: CI for Go api
 
 on:
   push:
     branches:
       - "*"
-  pull_request:
-    branches: [ main ]
 
 jobs:
   format_and_check_possible_static_errors:
