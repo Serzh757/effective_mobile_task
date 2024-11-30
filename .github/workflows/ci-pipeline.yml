@@ -29,7 +29,7 @@ jobs:
         run: go run github.com/segmentio/golines@latest -w --no-reformat-tags --max-len=120 .
 
       - name: Run golangci_lint
-        run: go run github.com/golangci/golangci-lint/cmd/golangci-lint@latest --timeout 360s
+        run: go run github.com/golangci/golangci-lint/cmd/golangci-lint@latest run --timeout 360s
 
 
   test:
