@@ -19,20 +19,17 @@ jobs:
         with:
           go-version: 1.22
 
-      - name: Install golangci_lint
-        run: go install github.com/golangci/golangci-lint/cmd/golangci-lint@v1.51.2
-
-      - name: Run golangci_lint
-        run: golangci-lint run --timeout 360s
-
       - name: Run GOIMPORTS
-        run: go run golang.org/x/tools/cmd/goimports@v0.1.11 -w -l .
+        run: go run golang.org/x/tools/cmd/goimports@latest -w -l .
 
       - name: Run GOFUMPT
-        run: go run mvdan.cc/gofumpt@v0.5.0 -w -l .
+        run: go run mvdan.cc/gofumpt@latest -w -l .
 
       - name: Run GOLINES
-        run: go run github.com/segmentio/golines@v0.11.0 -w --no-reformat-tags --max-len=120 .
+        run: go run github.com/segmentio/golines@latest -w --no-reformat-tags --max-len=120 .
+
+      - name: Run golangci_lint
+        run: go run github.com/golangci/golangci-lint/cmd/golangci-lint@latest --timeout 360s
 
 
   test:

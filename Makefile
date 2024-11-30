@@ -1,7 +1,7 @@
-GOIMPORTS := go run golang.org/x/tools/cmd/goimports@v0.1.11
-GOFUMPT := go run mvdan.cc/gofumpt@v0.5.0
-GOLINES := go run github.com/segmentio/golines@v0.11.0
-GOLANGCI := go run github.com/golangci/golangci-lint/cmd/golangci-lint@v1.51.2
+GOIMPORTS := go run golang.org/x/tools/cmd/goimports@latest
+GOFUMPT := go run mvdan.cc/gofumpt@latest
+GOLINES := go run github.com/segmentio/golines@latest
+GOLANGCI := go run github.com/golangci/golangci-lint/cmd/golangci-lint@latest
 
 ## build: Build an application
 .PHONY: build
@@ -16,12 +16,12 @@ run:
 ## generate: Regenerate all required files
 .PHONY: generate
 generate:
-	go generate
+	go generate ./...
 
 ## test: Launch unit tests
 .PHONY: test
 test:
-	go generate
+	go generate ./...
 	go test ./...
 
 ## tidy: Cleanup go.sum and go.mod files
