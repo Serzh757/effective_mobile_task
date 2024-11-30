@@ -1,6 +1,6 @@
 module github.com/effective_mobile_task
 
-go 1.21.1
+go 1.23.3
 
 require (
 	github.com/gin-gonic/gin v1.10.0
