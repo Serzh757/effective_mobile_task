@@ -17,7 +17,7 @@ jobs:
       - name: Setup Go
         uses: actions/setup-go@v4
         with:
-          go-version: 1.22
+          go-version: 1.23
 
       - name: Run GOIMPORTS
         run: go run golang.org/x/tools/cmd/goimports@latest -w -l .
@@ -42,7 +42,7 @@ jobs:
       - name: Setup Go
         uses: actions/setup-go@v4
         with:
-          go-version: 1.22
+          go-version: 1.23
 
       - name: Test Go api
         run: go test -v ./...
