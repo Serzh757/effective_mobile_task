@@ -2,8 +2,7 @@ package handler
 
 import "github.com/gin-gonic/gin"
 
-type MusicHandler struct {
-}
+type MusicHandler struct{}
 
 func NewMusicHandler() *MusicHandler {
 	return &MusicHandler{}

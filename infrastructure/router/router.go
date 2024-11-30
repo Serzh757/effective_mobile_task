@@ -1,8 +1,9 @@
 package router
 
 import (
-	"github.com/effective_mobile_task/internal/handler"
 	"github.com/gin-gonic/gin"
+
+	"github.com/effective_mobile_task/internal/handler"
 )
 
 func InitRouter() *gin.Engine {
