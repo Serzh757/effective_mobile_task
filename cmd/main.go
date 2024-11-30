@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/effective_mobile_task/infrastructure/router"
 	"github.com/rs/zerolog/log"
+
+	"github.com/effective_mobile_task/infrastructure/router"
 )
 
 func main() {
