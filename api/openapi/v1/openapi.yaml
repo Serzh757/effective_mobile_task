@@ -1,0 +1,14 @@
+openapi: 3.0.3
+info:
+  title: Songs API
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080
+    description: local env
+paths:
+  /api/v1/songs:
+  #$ref: 'routes/Auth.yaml#/paths/PostAnonymous'
+  /api/v1/song/:id":
+  #$ref: 'routes/Auth.yaml#/paths/PutLogout'
+  /api/v1/song:
+  #$ref: 'routes/User.yaml#/paths/PostAuthUpdate'
