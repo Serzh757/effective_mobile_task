@@ -46,7 +46,7 @@ fmt:
 	$(GOLINES) -w --no-reformat-tags --max-len=120 .
 
 .PHONY: check
-check: generate fmt lint test tidy
+check: docs generate fmt lint test tidy
 
 ## docs: Regenerate openapi docs
 .PHONY: docs
