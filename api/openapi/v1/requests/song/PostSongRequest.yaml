@@ -1,0 +1,17 @@
+type: object
+required:
+  - group
+  - song
+properties:
+  group:
+    description: Название группы
+    type: string
+    example: Группа
+    x-oapi-codegen-extra-tags:
+      binding: required
+  song:
+    description: Название песни
+    type: string
+    example: Песня
+    x-oapi-codegen-extra-tags:
+      binding: required

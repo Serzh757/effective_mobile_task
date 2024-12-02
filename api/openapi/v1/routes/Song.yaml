@@ -75,6 +75,11 @@ paths:
       description: Добавление новой песни
       summary: Добавление новой песни в библиотеку
       operationId: PostSong
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "../requests/song/PostSongRequest.yaml"
       responses:
         "200":
           $ref: "../responses/song/SongByIdReponse.yaml#/SongsByIdResponse"
@@ -86,6 +91,11 @@ paths:
       description: Обновление данных песни
       summary: Обновление данных песни в библиотеке
       operationId: PutSong
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "../requests/song/PutSongRequest.yaml"
       responses:
         "200":
           $ref: "../responses/song/SongByIdReponse.yaml#/SongsByIdResponse"

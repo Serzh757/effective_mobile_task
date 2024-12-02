@@ -7,8 +7,8 @@ import (
 	"github.com/effective_mobile_task/internal/usecase"
 )
 
-func InitRouter(_ *usecase.SongUseCase) *gin.Engine {
+func InitRouter(uc *usecase.SongUseCase) *gin.Engine {
 	router := gin.Default()
-	handler.RegisterRoutes(router)
+	handler.RegisterRoutes(router, uc)
 	return router
 }

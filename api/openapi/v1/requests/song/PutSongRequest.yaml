@@ -1,0 +1,39 @@
+type: object
+required: [ songID ]
+properties:
+  songID:
+    description: ИД песни
+    type: integer
+    example: ИД песни
+    x-oapi-codegen-extra-tags:
+      binding: required
+  group:
+    description: Название группы
+    type: string
+    example: Группа
+    x-oapi-codegen-extra-tags:
+      binding: omitempty
+  song:
+    description: Название песни
+    type: string
+    example: Песня
+    x-oapi-codegen-extra-tags:
+      binding: omitempty
+  text:
+    description: Куплеты песни
+    type: string
+    example: Куплеты песни
+    x-oapi-codegen-extra-tags:
+      binding: omitempty
+  link:
+    description: Ссылка на песню
+    type: string
+    example: Ссылка на песню
+    x-oapi-codegen-extra-tags:
+      binding: omitempty
+  releaseDate:
+    description: Дата релиза
+    type: string
+    example: Дата релиза
+    x-oapi-codegen-extra-tags:
+      binding: omitempty

@@ -1,9 +1,6 @@
 Song:
   required:
     - id
-    - createdAt
-    - updatedAt
-    - deletedAt
     - group
     - song
     - releaseDate
@@ -13,22 +10,9 @@ Song:
     id:
       type: integer
       example: 1234
-    createdAt:
-      type: string
-      format: date-time
-      example: "2022-12-01T00:00:00+03:00"
-    updatedAt:
-      type: string
-      format: date-time
-      example: "2022-12-01T00:00:00+03:00"
-    deletedAt:
-      type: string
-      format: date-time
-      example: "2022-12-01T00:00:00+03:00"
     releaseDate:
       type: string
-      format: date-time
-      example: "2022-12-01T00:00:00+03:00"
+      example: "16.07.2006"
     group:
       type: string
       example: Группа

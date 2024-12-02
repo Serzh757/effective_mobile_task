@@ -26,7 +26,7 @@ func (uc *SongUseCase) SongByID(songID int) (*models.Song, error) {
 }
 
 // SaveSong - Сохранение новой песни
-func (uc *SongUseCase) SaveSong(req models.Song) (*models.Song, error) {
+func (uc *SongUseCase) SaveSong(req *models.Song) (*models.Song, error) {
 	return uc.repository.CreateSong(req)
 }
 
@@ -36,6 +36,6 @@ func (uc *SongUseCase) RemoveSong(songID int) error {
 }
 
 // UpdatedSong - Обновление данных песни
-func (uc *SongUseCase) UpdatedSong(req models.Song) (*models.Song, error) {
+func (uc *SongUseCase) UpdatedSong(req *models.Song) (*models.Song, error) {
 	return uc.repository.UpdateSong(req)
 }
