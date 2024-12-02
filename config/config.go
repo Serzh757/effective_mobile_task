@@ -11,6 +11,8 @@ type Config struct {
 	User     string
 	Password string
 	DBName   string
+
+	InfoBackend string
 }
 
 func NewConfig() *Config {
@@ -22,11 +24,12 @@ func NewConfig() *Config {
 		return nil
 	}
 	config := &Config{
-		Host:     viper.GetString("DB_HOST"),
-		Port:     viper.GetInt("DB_PORT"),
-		User:     viper.GetString("DB_USER"),
-		Password: viper.GetString("DB_PASSWORD"),
-		DBName:   viper.GetString("DB_NAME"),
+		Host:        viper.GetString("DB_HOST"),
+		Port:        viper.GetInt("DB_PORT"),
+		User:        viper.GetString("DB_USER"),
+		Password:    viper.GetString("DB_PASSWORD"),
+		DBName:      viper.GetString("DB_NAME"),
+		InfoBackend: viper.GetString("INFO_BACKEND_URL"),
 	}
 	return config
 }
