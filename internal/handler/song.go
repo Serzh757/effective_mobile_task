@@ -21,7 +21,13 @@ func (h *MusicHandler) AddSong(ctx *gin.Context) {
 		return
 	}
 
-	response, err := h.uc.SaveSong(makeAddSongRequest(req))
+	songInfo, err := h.GetSongDetailFromAPI(req.Group, req.Song)
+	if err != nil {
+		_ = ctx.AbortWithError(http.StatusInternalServerError, err)
+		return
+	}
+
+	response, err := h.uc.SaveSong(makeAddSongRequest(req, songInfo))
 	if err != nil {
 		_ = ctx.AbortWithError(http.StatusInternalServerError, err)
 		return
@@ -29,10 +35,13 @@ func (h *MusicHandler) AddSong(ctx *gin.Context) {
 	ctx.JSON(http.StatusOK, dview.NewSong(response))
 }
 
-func makeAddSongRequest(req view.PostSongRequest) *models.Song {
+func makeAddSongRequest(req view.PostSongRequest, songInfo models.SongDetail) *models.Song {
 	return &models.Song{
-		Group: req.Group,
-		Song:  req.Song,
+		Group:       req.Group,
+		Song:        req.Song,
+		Text:        songInfo.Text,
+		Link:        songInfo.Link,
+		ReleaseDate: songInfo.ReleaseDate,
 	}
 }
 

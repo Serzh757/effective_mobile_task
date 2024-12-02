@@ -18,7 +18,7 @@ func main() {
 	}
 	songRepository := repository.NewSongRepository(database)
 	songUseCase := usecase.NewSongUseCase(songRepository)
-	api := router.InitRouter(songUseCase)
+	api := router.InitRouter(songUseCase, cfg)
 
 	err = api.Run(":8080")
 	if err != nil {

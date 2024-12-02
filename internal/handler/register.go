@@ -3,6 +3,7 @@ package handler
 import (
 	"github.com/gin-gonic/gin"
 
+	"github.com/effective_mobile_task/config"
 	errors "github.com/effective_mobile_task/internal/middleware"
 	"github.com/effective_mobile_task/internal/swagger"
 	"github.com/effective_mobile_task/internal/usecase"
@@ -10,19 +11,21 @@ import (
 )
 
 type MusicHandler struct {
-	uc *usecase.SongUseCase
+	cfg *config.Config
+	uc  *usecase.SongUseCase
 }
 
-func NewMusicHandler(uc *usecase.SongUseCase) *MusicHandler {
+func NewMusicHandler(uc *usecase.SongUseCase, cfg *config.Config) *MusicHandler {
 	return &MusicHandler{
-		uc: uc,
+		uc:  uc,
+		cfg: cfg,
 	}
 }
 
-func RegisterRoutes(router *gin.Engine, uc *usecase.SongUseCase) {
+func RegisterRoutes(router *gin.Engine, uc *usecase.SongUseCase, cfg *config.Config) {
 	router.Use(errors.Wrapper)
 	groupV1 := router.Group("/api/v1")
-	handler := NewMusicHandler(uc)
+	handler := NewMusicHandler(uc, cfg)
 	_ = initializeSwagger(router)
 
 	groupV1.GET("/health", handler.HealthHandler)

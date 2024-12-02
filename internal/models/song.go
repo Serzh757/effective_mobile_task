@@ -16,9 +16,3 @@ type SongDetail struct {
 	Text        string `json:"text"`
 	Link        string `json:"link"`
 }
-
-// NewSongRequest используется при добавлении новой песни
-type NewSongRequest struct {
-	Group string `json:"group"`
-	Song  string `json:"song"`
-}
