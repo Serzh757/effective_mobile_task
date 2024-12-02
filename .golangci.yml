@@ -25,6 +25,9 @@ linters-settings:
   godot:
     exclude:
       - '@.+'
+  gosec:
+    excludes:
+      - G115
 
   revive:
     rules:

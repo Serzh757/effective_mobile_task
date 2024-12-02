@@ -1,0 +1,17 @@
+paths:
+  PostAnonymous:
+    post:
+      tags:
+        - Авторизация
+      description: Создание анонимного jwt токена
+      operationId: PostAuthAnonymous
+      parameters:
+        - $ref: '../openapi.yaml#/components/parameters/Platform'
+        - $ref: '../openapi.yaml#/components/parameters/Version'
+        - $ref: '../openapi.yaml#/components/parameters/DeviceOS'
+      responses:
+        "200":
+          $ref: '../responses/auth/AuthAnonymousResponse.yaml#/AuthAnonymousResponse'
+        default:
+          $ref: '../openapi.yaml#/components/responses/MobileErrorResponse'
+      summary: Создание анонимного jwt токена
