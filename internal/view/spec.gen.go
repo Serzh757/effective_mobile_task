@@ -18,9 +18,25 @@ import (
 // Base64 encoded, gzipped, json marshaled Swagger object
 var swaggerSpec = []string{
 
-	"H4sIAAAAAAAC/2SOsWrEMBBEf+WYWkg6rjHbpUwXSJmkELZiC5RdIW3cCP17sN0Ern0D703HLD9FOLI2",
-	"UB8Gib8F1KFJcwThXXhtt5e3VxjssbYkDMLdeusxDKREDiWB8LDePmBQgm6HCy6U5Pa7a8Lr5f5PHKXl",
-	"E8/8vDEMWqxHDvTRscQ211T0ameZQ75F3mHwWzMIm2oh585hk6Y0+cljfI2/AAAA//+Yh+4j3wAAAA==",
+	"H4sIAAAAAAAC/8xX3WobRxR+FTHtXVfelZxAWMiFU5diKK1pepf6YqI9ljfdv8yMjIUQWDZtUwwNpbko",
+	"gdSkeQFZVES1K/kVzrxROaOVtNKu/BebBkJs786e853vO3/TYrU4TOIIIiWZ22ICZBJHEswfXwgRi2/T",
+	"J/TAA1kTfqL8OGIuw2O9jyPd0QfY1S9LONIvcIAneIpdZrFExAkI5Y9NhSAlrxcZ+Qv7eEpGsgYGzGKw",
+	"x8MkgAvPqGZCB6QSflRn7XbbYo/jqC4fNTe8LPBaHCmIFP3KkyTwa5zc288kYWgxWduBkJu3QfDNNnOf",
+	"tNinAraZyz6xZwTZ43PSzvpoBIq1t4zrhcje6Q6eY1+/wKE+wn8I+wH2sK8P2ATnV75Ud40z9XEznG0r",
+	"dWpUJHv0c17bmgCuwFszsGeqVZ1qtVyplp3Kd47jmn+fOauu4zCLbcci5Iq5zOMKysoPIS8m4QzgTgzX",
+	"RdxI5o3i73pfH+I5npvszX3ie3PnK9XVe9NTfqSgDoKOBX70w4Lht7qjj/CMyqKEQ/qPyO7gUP9a5EhA",
+	"AFzCOldw22HLVL4MuDfYxffYwy4OcYD9Kbai6rKYgr0FLfC1Ie2MskUfXfJ5I/HuIlEMac8bvgCPuU9I",
+	"KSuTk1m32ZSaZEFKyzzxaaipnltTl/HTZ1BTbKHNUGnlG9tbPMeB7uAITye89HGY64weV6aiL6vjXJzm",
+	"w62FTnIrUHwFobwapikzXAjeXIaRHvvRdkw2la+M6gZ1aW1zg1lsF4QcQ62sOCsOmY0TiHjiM5etrjgr",
+	"q4SVqx2DyuaJb+9W7Ek6J7EsCvoVjvAEu9ij7Jyk9xBH2MMRdblsqhILptVueMxlm7FUjydJkZmHVcdZ",
+	"xsr0nJ2fP6aTbfNUmou/nh+5pv02wpCL5rUiKmGvhCdmTp7hwPRzGqCHlNe8LkkZPE6b0EuTQ0mjiMI/",
+	"8SS1n3H4t2kWQ32kf7yQxMZHyeE1QipmEfvLWGxbc6lpt3yv/T0b00pdp4Dgd8Z1BknG+QDfF7nPM71u",
+	"rBNnj5ob66ZSBA9BgZBmQ5j3ubE+r5pPD6m2mMUiHpp55rFsGSvRACuzeyxOvfZWTuN7+Vi/jkufp9vN",
+	"rYl5E/pK+mfs633s0/s/8NXymqhDUU0c4wjP9CFZ+RDRvgT1USn2/1blzUi9qpQLhWkivrK4RX6xRxN0",
+	"1izGwzQn8FoQGM4uExjf4Aj/pVBKdMnR++N1TP+kjyZyP2+AaM70TugulVV4KkOlaCvdK8c88cu12IM6",
+	"RGXYU4KXx1S1zIqVmrRSMw8rJFAO5mtiBweG9Y65I4wI8KH+hVqqedSnOURL7nwgpmkWBgJic3ks968d",
+	"zFM/8mgpdFmg4GHFmS6RM1+zIO9/UCXM3d3ushKunoHT7P8t90k3e3K8kUkQu8UJGcQ1HpQg2qXtWQTM",
+	"ZTtKJa5tmxc7sVTuA+eBQ/fJ/wIAAP//o7q9eUEQAAA=",
 }
 
 // GetSwagger returns the content of the embedded swagger specification file

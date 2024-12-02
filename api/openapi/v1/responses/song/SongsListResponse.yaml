@@ -1,0 +1,16 @@
+SongsListResponse:
+  description: Успешный ответ
+  content:
+    application/json:
+      schema:
+        allOf:
+          - $ref: '#/SongsListResult'
+
+SongsListResult:
+  description: Список песен
+  required: [ data ]
+  properties:
+    data:
+      type: array
+      items:
+        $ref: "../../components/schema/Song.yaml#/Song"

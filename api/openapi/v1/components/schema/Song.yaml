@@ -1,0 +1,44 @@
+Song:
+  required:
+    - id
+    - createdAt
+    - updatedAt
+    - deletedAt
+    - group
+    - song
+    - releaseDate
+    - text
+    - link
+  properties:
+    id:
+      type: integer
+      example: 1234
+    createdAt:
+      type: string
+      format: date-time
+      example: "2022-12-01T00:00:00+03:00"
+    updatedAt:
+      type: string
+      format: date-time
+      example: "2022-12-01T00:00:00+03:00"
+    deletedAt:
+      type: string
+      format: date-time
+      example: "2022-12-01T00:00:00+03:00"
+    releaseDate:
+      type: string
+      format: date-time
+      example: "2022-12-01T00:00:00+03:00"
+    group:
+      type: string
+      example: Группа
+    song:
+      type: string
+      example: Название песни
+    text:
+      type: string
+      example: Куплеты песни
+    link:
+      type: string
+      example: Ссылка на песню
+  type: object

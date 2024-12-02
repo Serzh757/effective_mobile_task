@@ -7,8 +7,18 @@ servers:
     description: local env
 paths:
   /api/v1/songs:
-  #$ref: 'routes/Auth.yaml#/paths/PostAnonymous'
-  /api/v1/song/:id":
-  #$ref: 'routes/Auth.yaml#/paths/PutLogout'
+    $ref: "routes/Song.yaml#/paths/AllSongs"
+  /api/v1/song/{id}:
+    $ref: "routes/Song.yaml#/paths/SongByID"
   /api/v1/song:
-  #$ref: 'routes/User.yaml#/paths/PostAuthUpdate'
+    $ref: "routes/Song.yaml#/paths/Song"
+
+components:
+  responses:
+    ErrorResponse:
+      description: Простая ошибка
+      properties:
+        message:
+          type: string
+          description: Текст ошибки
+          example: Текст ошибки

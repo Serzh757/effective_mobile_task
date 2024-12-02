@@ -1,17 +1,93 @@
 paths:
-  PostAnonymous:
-    post:
+  AllSongs:
+    get:
       tags:
-        - Авторизация
-      description: Создание анонимного jwt токена
-      operationId: PostAuthAnonymous
+        - Библиотека песен
+      description: Получение библиотеки всех песен
+      summary: Получение библиотеки всех песен
+      operationId: GetAllSongs
       parameters:
-        - $ref: '../openapi.yaml#/components/parameters/Platform'
-        - $ref: '../openapi.yaml#/components/parameters/Version'
-        - $ref: '../openapi.yaml#/components/parameters/DeviceOS'
+        - name: page
+          in: query
+          description: Номер страницы
+          schema:
+            type: integer
+            default: 1
+          x-oapi-codegen-extra-tags:
+            form: page,default=1
+        - name: perPage
+          in: query
+          description: Количество сущностей на странице
+          schema:
+            type: integer
+            default: 15
+          x-oapi-codegen-extra-tags:
+            binding: lte=1000
+            form: perPage,default=15
       responses:
         "200":
-          $ref: '../responses/auth/AuthAnonymousResponse.yaml#/AuthAnonymousResponse'
+          $ref: "../responses/song/SongsListResponse.yaml#/SongsListResponse"
         default:
-          $ref: '../openapi.yaml#/components/responses/MobileErrorResponse'
-      summary: Создание анонимного jwt токена
+          $ref: "../openapi.yaml#/components/responses/ErrorResponse"
+
+  SongByID:
+    get:
+      tags:
+        - Песня
+      description: Получение песни из библиотеки
+      summary: Получение песни из библиотеки через ИД
+      operationId: GetSongByID
+      parameters:
+        - name: id
+          in: path
+          description: ID песни
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          $ref: "../responses/song/SongByIdReponse.yaml#/SongsByIdResponse"
+        default:
+          $ref: "../openapi.yaml#/components/responses/ErrorResponse"
+    delete:
+      tags:
+        - Песня
+      description: Удаление песни из библиотеки
+      summary: Удаление песни из библиотеки через ИД
+      operationId: DeleteSongByID
+      parameters:
+        - name: id
+          in: path
+          description: ID песни
+          required: true
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: "No Content"
+        default:
+          $ref: "../openapi.yaml#/components/responses/ErrorResponse"
+
+  Song:
+    post:
+      tags:
+        - Песня
+      description: Добавление новой песни
+      summary: Добавление новой песни в библиотеку
+      operationId: PostSong
+      responses:
+        "200":
+          $ref: "../responses/song/SongByIdReponse.yaml#/SongsByIdResponse"
+        default:
+          $ref: "../openapi.yaml#/components/responses/ErrorResponse"
+    put:
+      tags:
+        - Песня
+      description: Обновление данных песни
+      summary: Обновление данных песни в библиотеке
+      operationId: PutSong
+      responses:
+        "200":
+          $ref: "../responses/song/SongByIdReponse.yaml#/SongsByIdResponse"
+        default:
+          $ref: "../openapi.yaml#/components/responses/ErrorResponse"
